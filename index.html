@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniliuc Marian-Alexandru</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</head>
+<body id="body">
+    <div class="leftMenu">
+        <ul class="leftMenuList">
+            <li onclick="goToLinkedin()" class="linkedinIcon"><i class="fa fa-linkedin-square" class="icons"></i></li>
+            <li onclick="goToGithub()" class="githubIcon"><i class="fa fa-github" class="icons"></i></li>
+        </ul>
+    </div>
+    <div class="footerMenu">
+        <ul class="footerMenuList">
+            <li onclick="goToSection('about')" id="aboutButton">ABOUT</li>
+            <li onclick="goToSection('studies')" id="studiesButton">STUDIES</li>
+            <li onclick="goToSection('projects')" id="projectsButton">PROJECTS</li>
+            <li onclick="goToSection('contact')" id="contactButton">CONTACT</li>
+        </ul>
+        <div>
+        </div>
+    </div>
+    <div class="meSection">
+        <div class="meDetails">
+            <h3>
+                <span class="span1">&lt</span>
+                Hello World! 
+                <span class="span1">/&gt</span>
+            </h3>
+            <h3>
+                <span class="span2">&lt</span>
+                I'm Alex - Junior Web Developer
+                <span class="span2">/&gt</span>
+            </h3>
+            <h3 class="span3">
+                <span>&lt</span>
+                script
+                <span>&gt</span>
+            </h3>
+            <h3>
+                <pre>           <span class="span5">if </span><span class="span6">(</span> life ===  awful <span class="span6">)</span> <span class="span4">{</span>
+                add css :)
+            <span class="span4">}</span>
+                </pre>
+            </h3>
+            <h3 class="span3">
+                <span>&lt/</span>
+                script
+                <span>&gt</span>
+            </h3>
+        </div>
+        <img class="mePhoto" src="images/me1.png">
+    </div>
+    <div class="studiesSection"> 
+        <div class="topSubSection">
+            <div class="studiesElement">
+                <img src="images/atl-modified.png"> 
+                <div class="pst">
+                    <h2>"A.T. Laurian" National College</h2>
+                    <h4>Mathematics and Informatics</h4>
+                </div>
+            </div>
+            <div class="studiesElement">
+                <img src="images/fsega-modified.png"> 
+                <div>
+                    <h2>Faculty of Economics and Business Administration</h2>
+                    <h4>Business Information Systems</h4>
+                </div>
+            </div>
+        </div>
+        <div class="bottomSubSection">
+            <div class="studiesElement">
+                <img src="images/siit-modified.png"> 
+                <div>
+                    <h2>Informal School of IT</h2>
+                    <h4>HTML, CSS, JavaScript(Vanilla)</h4>
+                </div>
+            </div>
+            <div class="studiesElement">
+                <img src="images/siit-modified.png"> 
+                <div>
+                    <h2>Informal School of IT</h2>
+                    <h4>ReactJS</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projectsSection">
+        <div class="sneakersBoutique">
+            <div class="sbImagesContainer">
+                <img id="sbImage" class="sbImages" src="images/sb1.png">
+                <!-- <img class="sbImages" src="images/sb2.png">
+                <img class="sbImages" src="images/sb3.png">
+                <img class="sbImages" src="images/sb4.png">
+                <img class="sbImages" src="images/sb5.png"> -->
+            </div>
+            <div class="sbDetails">
+                <h2 id="sbProjectLink" onclick="goToSb()">Sneakers Boutique</h2>
+                <p>Sneakers Boutique is a footwear shop wich includes the main functionalities of an online store application. The products are presented to the user by the home page, from wich he can see the details(price, description, materials) of the article that he is excited about. Of course, he can also introduce it in his cart and modify its amount afterwards. In addition to this, the admin page is the place where the footwear articles are added, modified or removed from the stocks.</p>
+            </div>
+        </div>
+        <div class="noWheelGap">
+            <div class="nwgImagesContainer">
+                <img id="nwgImage" class="nwgImages" src="images/nwg3.png">
+                <!-- <img class="nwgImages" src="images/nwg2.png">
+                <img class="nwgImages" src="images/nwg1.png"> -->
+            </div>
+            <div class="nwgDetails">
+                <h2 id="nwgProjectLink" >No-Wheel-Gap</h2>
+                <p>No-Wheel-Gap is an automotive social network and the project that I am currently working on. It is a ReactJS application wich is going to include users, posts, likes, comments and so on. I will come back with updates soon.</p>
+            </div>
+        </div>
+    </div>
+    <div class="contactSection">
+        <h1>Thank you :)</h1>
+        <div>
+            <h2><i class="fa fa-phone"></i> 0725410990</h2>
+            <h2><i class="fa fa-envelope"></i> alex.daniliuc14@yahoo.com</h2>
+        </div>
+    </div>
+
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
