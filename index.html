@@ -19,7 +19,7 @@
     <div class="footerMenu">
         <ul class="footerMenuList">
             <li onclick="goToSection('about')" id="aboutButton">ABOUT</li>
-            <li onclick="goToSection('studies')" id="studiesButton">STUDIES</li>
+            <li onclick="goToSection('studies')" id="studiesButton">EDUCATION</li>
             <li onclick="goToSection('projects')" id="projectsButton">PROJECTS</li>
             <li onclick="goToSection('contact')" id="contactButton">CONTACT</li>
         </ul>
@@ -44,9 +44,9 @@
                 <span>&gt</span>
             </h3>
             <h3>
-                <pre>           <span class="span5">if </span><span class="span6">(</span> life ===  awful <span class="span6">)</span> <span class="span4">{</span>
-                add css :)
-            <span class="span4">}</span>
+                <pre><span class="span5">if </span><span class="span6">(</span> life === boring <span class="span6">)</span> <span class="span4">{</span>  
+    add css :)
+<span class="span4">}</span>
                 </pre>
             </h3>
             <h3 class="span3">
@@ -60,33 +60,83 @@
     <div class="studiesSection"> 
         <div class="topSubSection">
             <div class="studiesElement">
-                <img src="images/atl-modified.png"> 
-                <div class="pst">
-                    <h2>"A.T. Laurian" National College</h2>
-                    <h4>Mathematics and Informatics</h4>
+                <div class="studiesImage">
+                    <img src="images/atl-modified.png" onclick="switchSection('college')"> 
+                </div>
+                <div class="studiesDetails">
+                    <h2 id="collegeName" >"A.T. Laurian" National College</h2>
+                    <div id="collegeDetails">
+                        <h2>Mathematics and Computer Science</h2>
+                        <h4>The college was an essential period regarding my personal development. I gained significant communication skills and interpersonal experience. Moreover, I learned some C++ concepts and applied them in various exercises.</h4>
+                        <h3>Skills:</h3>
+                        <ul>
+                            <li>C++</li>
+                            <li>Teamwork</li>
+                            <li>Analitical Thinking</li>
+                            <li>Communication skills</li>
+                            <li>Discipline</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="studiesElement">
-                <img src="images/fsega-modified.png"> 
-                <div>
-                    <h2>Faculty of Economics and Business Administration</h2>
-                    <h4>Business Information Systems</h4>
+                <div class="studiesImage">
+                    <img src="images/siit-modified.png" onclick="switchSection('siit1')"> 
+                </div>
+                <div class="studiesDetails">
+                    <h2 id="siitName1">Informal School of IT</h2>
+                    <div id="siitDetails1">
+                        <h2>Web Development</h2>
+                        <h4>The Web Development course held by SIIT was full of new information and coding improvements. I was introduced in the web technologies such as HTML, CSS and JavaScript and I realized how they work together. I also learned concepts like DOM manipulation, AJAX, Responsive Web Design, Browser Object Model, Objects, Classes, Promises and so on.</h4>
+                        <h3>Skills:</h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript (Vanilla)</li>
+                            <li>Postman API</li>
+                            <li>ES6</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="bottomSubSection">
             <div class="studiesElement">
-                <img src="images/siit-modified.png"> 
-                <div>
-                    <h2>Informal School of IT</h2>
-                    <h4>HTML, CSS, JavaScript(Vanilla)</h4>
+                <div class="studiesImage">
+                    <img src="images/fsega-modified.png" onclick="switchSection('faculty')"> 
+                </div>
+                <div class="studiesDetails">
+                    <h2 id="facultyName">Faculty of Economics and Business Administration</h2>
+                    <div id="facultyDetails">
+                        <h2>Business Information Systems</h2>
+                        <h4>I am currently a FSEGA student in my second year of study. Besides the business and economic classes, I dealt with Data Structures and Algorithms using C#.</h4>
+                        <h3>Skills:</h3>
+                        <ul>
+                            <li>C#</li>
+                            <li>Adaptability</li>
+                            <li>Problem-Solving</li>
+                            <li>Time-Management</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="studiesElement">
-                <img src="images/siit-modified.png"> 
-                <div>
-                    <h2>Informal School of IT</h2>
-                    <h4>ReactJS</h4>
+                <div class="studiesImage">
+                    <img src="images/siit-modified.png" onclick="switchSection('siit2')"> 
+                </div>
+                <div class="studiesDetails">
+                    <h2 id="siitName2">Informal School of IT</h2>
+                    <div id="siitDetails2">
+                        <h2>ReactJS</h2>
+                        <h4>The ReactJS course was all about efficiency and productivity. I learned how to improve my code using React Components with their props and state and how to connect them by the React Router. Furthermore, I was taught about React Redux, Events handling, Lifecycle methods and Hooks.  </h4>
+                        <h3>Skills:</h3>
+                        <ul>
+                            <li>Node Package Manager</li>
+                            <li>React Router</li>
+                            <li>React Redux</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +152,9 @@
             </div>
             <div class="sbDetails">
                 <h2 id="sbProjectLink" onclick="goToSb()">Sneakers Boutique</h2>
-                <p>Sneakers Boutique is a footwear shop wich includes the main functionalities of an online store application. The products are presented to the user by the home page, from wich he can see the details(price, description, materials) of the article that he is excited about. Of course, he can also introduce it in his cart and modify its amount afterwards. In addition to this, the admin page is the place where the footwear articles are added, modified or removed from the stocks.</p>
+                <p>Sneakers Boutique is a footwear shop wich includes the main functionalities of an online store application. The products are presented to the user by the home page, from wich he can see the details(price, description, materials) of the article that he is excited about. Of course, he can also introduce it in his cart and modify its amount afterwards. In addition to this, the admin page is the place where the footwear articles are added, modified or removed from the stocks.
+                </p>
+                <p>This project was realised with Vanilla JavaScript and is connected to a Firebase database. It was used to store the products information wich was fetched from the frontend application by AJAX and APIs. I also uitilized Bootstrap and Media Queries to make the app responsive.</p>
             </div>
         </div>
         <div class="noWheelGap">
@@ -114,6 +166,7 @@
             <div class="nwgDetails">
                 <h2 id="nwgProjectLink" >No-Wheel-Gap</h2>
                 <p>No-Wheel-Gap is an automotive social network and the project that I am currently working on. It is a ReactJS application wich is going to include users, posts, likes, comments and so on. I will come back with updates soon.</p>
+                <p>The network application uses a MongoDB database wich stores users, posts, passwords, emails and so on. The components are linked by React Router and the state is managed through React Redux.</p>
             </div>
         </div>
     </div>

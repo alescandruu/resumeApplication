@@ -116,6 +116,10 @@ ul {
     /* border: 10px solid white; */
 }
 
+pre {
+    padding-left: 15%;
+}
+
 .span1 {
     color: rgb(255, 4, 4); 
 }
@@ -155,7 +159,9 @@ h3 {
     height: 100vh;
     display: flex;
     align-items: center;
-    margin-top: -4%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -6%;
 }
 
 .studiesSection h2, .studiesSection h4 {
@@ -164,51 +170,77 @@ h3 {
 
 .studiesElement {
     color: white;
+    width: 80%;
     display: flex;
-    /* justify-content: space-around; */
-    width: 100%;
-    gap: 5%;
+    /* background-color: aquamarine; */
+    justify-content: space-between;
+    align-items: center;
 }
 
-.studiesElement img {
-    width: 30%;
+.studiesElement img:hover {
+    border: 4px solid white;
+    cursor: pointer;
+}
+
+.studiesImage {
+    width: 50%;
+    /* background-color: beige; */
+}
+
+.studiesImage img {
+    /* width: 60%; */
+    width: 70%;
     min-height: 100%;
-    object-fit: contain;
-}
-
-.studiesElement div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* object-fit: contain; */
+    /* box-sizing: border-box; */
+    border: 4px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
 }
 
 .topSubSection, .bottomSubSection {
-    width: 50%;
-    height: 100%;
+    width: 90%;
+    height: 40%;
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-around; */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* background-color: violet; */
+    /* margin: 0 auto; */
+    padding-left: 10%;
+    padding-right: 2%;
+    /* text-align: center; */
+    gap: 10%;
+    /* background-color: blue; */
+}
+
+.studiesDetails {
+    width: 70%;
+    /* background-color: blue; */
     margin: 0 auto;
-    padding-left: 13%;
-    margin-top: -5%;
+}
+
+.studiesDetails h2, .studiesDetails h3 {
     text-align: center;
-    gap: 20%;
+}
+
+.studiesDetails h4 {
+    text-align:justify;
+}
+
+.studiesDetails ul {
+    list-style: disc;
+}
+
+#collegeDetails, #facultyDetails, #siitDetails1, #siitDetails2 {
+    display: none;
 }
 
 .projectsSection {
     height: 100vh;
     display: flex;
-    /* flex-direction: row; */
-    /* align-items: center; */
     color: white;
-    /* justify-content: center; */
     gap: 1%;
     padding-left: 5%;
-    /* margin-top: -1%; */
-    padding-top: 6%;
+    padding-top: 4%;
 }
 
 .noWheelGap, .sneakersBoutique {
@@ -227,11 +259,11 @@ h3 {
 
 #sbImage, #nwgImage {
     cursor: pointer;
-    border: 2px solid rgba(255, 255, 255, 0);
+    border: 3px solid rgba(255, 255, 255, 0);
 }
 
 #sbImage:hover, #nwgImage:hover {
-    border: 2px solid white;
+    border: 3px solid white;
 }
 
 .sbImagesContainer, .nwgImagesContainer {
@@ -243,7 +275,7 @@ h3 {
     text-align: center;
     width: 95%;
     margin: 0 auto;
-    font-size: 130%;
+    font-size: 115%;
 }
 
 .contactSection {
@@ -258,6 +290,7 @@ h3 {
 
 .contactSection h1 {
     font-size: 5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #sbProjectLink, #nwgProjectLink {
@@ -272,5 +305,36 @@ h3 {
     cursor: pointer;
 }
 
+/* @media only screen and (max-width: 1120px) {
+    .meSection {
+        flex-direction: column;
+        font-size: 1em;
+        gap: 1%;
+        justify-content: center;
+    }
+}
 
+@media only screen and (max-width: 1120px) {
+    .meSection {
+        flex-direction: column;
+        font-size: 1em;
+        gap: 1%;
+        justify-content: center;
+    }
+}
 
+@media only screen and (max-width: 850px) {
+    .studiesSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5%;
+        text-align: start;
+    }
+    .topSubSection {
+        flex-direction: column;
+    }
+    .bottomSubSection {
+        flex-direction: column;
+    }
+} */

@@ -5,6 +5,14 @@ var contact = document.getElementById("contactButton");
 var app = document.getElementById("body");
 var sbImage = document.getElementById("sbImage");
 var nwgImage = document.getElementById("nwgImage");
+var collegeDetails = document.getElementById("collegeDetails");
+var collegeName = document.getElementById("collegeName");
+var facultyName = document.getElementById("facultyName");
+var facultyDetails = document.getElementById("facultyDetails");
+var siitName1 = document.getElementById("siitName1");
+var siitDetails1 = document.getElementById("siitDetails1");
+var siitName2 = document.getElementById("siitName2");
+var siitDetails2 = document.getElementById("siitDetails2");
 
 window.onload = () => {
     goToSection("about");
@@ -71,4 +79,57 @@ function goToGithub() {
 
 function goToSb() {
     window.open("https://alescandruu.github.io/webwork/index.html");
+}
+
+var college = 0;
+var faculty = 0; 
+var siit1 = 0;
+var siit2 = 0;
+
+function switchSection (button) {
+    if(button === "college") {
+        if(college % 2 == 0) {
+            collegeDetails.style.display = "block";
+            collegeName.style.display = "none";
+            college++;
+        }
+        else {
+            collegeDetails.style.display = "none";
+            collegeName.style.display = "block";
+            college++;
+        }
+    } else if (button === "faculty") {
+        if(faculty % 2 == 0) {
+            facultyDetails.style.display = "block";
+            facultyName.style.display = "none";
+            faculty++;
+        }
+        else {
+            facultyDetails.style.display = "none";
+            facultyName.style.display = "block";
+            faculty++;
+        }
+    } else if(button === "siit1") {
+        if(siit1 % 2 == 0) {
+            siitDetails1.style.display = "block";
+            siitName1.style.display = "none";
+            siit1++;
+        }
+        else {
+            siitDetails1.style.display = "none";
+            siitName1.style.display = "block";
+            siit1++;
+        }
+    } else if(button === "siit2") {
+        if(siit2 % 2 == 0) {
+            siitDetails2.style.display = "block";
+            siitName2.style.display = "none";
+            siit2++;
+        }
+        else {
+            siitDetails2.style.display = "none";
+            siitName2.style.display = "block";
+            siit2++;
+        }
+    }
 }
