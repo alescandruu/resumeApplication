@@ -13,6 +13,7 @@ var siitName1 = document.getElementById("siitName1");
 var siitDetails1 = document.getElementById("siitDetails1");
 var siitName2 = document.getElementById("siitName2");
 var siitDetails2 = document.getElementById("siitDetails2");
+var projectsSwitch = document.getElementById("projectsSwitch");
 
 window.onload = () => {
     goToSection("about");
@@ -23,21 +24,25 @@ function goToSection(button) {
     if(button === "about") {
         about.style.borderLeft = "3px solid white";
         about.style.borderRight = "3px solid white";
+        projectsSwitch.style.display = "none";
         window.scrollTo(0,0);
     } else if(button === "studies") {
         studies.style.borderLeft = "3px solid white";
         studies.style.borderRight = "3px solid white";
         var height = window.innerHeight;
+        projectsSwitch.style.display = "none";
         window.scrollTo(0,0.923 * height);
     } else if(button === "projects") {
         projects.style.borderLeft = "3px solid white";
         projects.style.borderRight = "3px solid white";
         var height = window.innerHeight;
         window.scrollTo(0,1.923 * height);
+        setTimeout(() => {projectsSwitch.style.display = "flex";}, 600);
     } else if(button === "contact") {
         contact.style.borderLeft = "3px solid white";
         contact.style.borderRight = "3px solid white";
         var height = window.innerHeight;
+        projectsSwitch.style.display = "none";
         window.scrollTo(0,2.923 * height);
     }
 }
@@ -79,6 +84,14 @@ function goToGithub() {
 
 function goToSb() {
     window.open("https://alescandruu.github.io/webwork/index.html");
+}
+
+function goToWf() {
+    window.open("https://alescandruu.github.io/weatherForecast/");
+}
+
+function goToGs() {
+    window.open("https://alescandruu.github.io/gamesStore/");
 }
 
 var college = 0;
@@ -131,5 +144,15 @@ function switchSection (button) {
             siitName2.style.display = "block";
             siit2++;
         }
+    }
+}
+
+function switchTo(section) {
+    if(section === "first") {
+        document.getElementById("projectsSection2").style.display = "none";
+        document.getElementById("projectsSection1").style.display = "flex";
+    } else {
+        document.getElementById("projectsSection1").style.display = "none";
+        document.getElementById("projectsSection2").style.display = "flex";
     }
 }

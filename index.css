@@ -56,17 +56,17 @@ ul {
     background-color: rgba(0, 0, 0, 0.336);
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 3.3em;
     color: white;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 140%;
     font-weight: bold;
 }
 
 .footerMenuList {
     display: flex;
-    /* gap: 5%; */
+    gap: 5%;
     padding-left: 3.5em;
     height: 100%;
     align-items: center;
@@ -92,6 +92,26 @@ ul {
 .footerMenuActive {
     border-left: 3px solid white;
     border-right: 3px solid white;
+}
+
+.projectsSwitch {
+    display: none;
+    width: 4%;
+    justify-content: space-between;
+    margin-right: 25%;
+}
+
+.projectsSwitch p {
+    padding:0 10%;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+
+.projectsSwitch p:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 2px solid black;
 }
 
 .meSection {
@@ -240,7 +260,11 @@ h3 {
     color: white;
     gap: 1%;
     padding-left: 5%;
-    padding-top: 4%;
+    padding-top: 6%;
+}
+
+#projectsSection2 {
+    display: none;
 }
 
 .noWheelGap, .sneakersBoutique {
@@ -278,6 +302,17 @@ h3 {
     font-size: 115%;
 }
 
+.projectsSection2 {
+    cursor: pointer;
+    border: 3px solid rgba(255, 255, 255, 0);
+    width: 90%;
+    border-radius: 25px;
+}
+
+.projectsSection2:hover {
+    border: 3px solid white;
+}
+
 .contactSection {
     height: 100vh;
     display: flex;
@@ -293,13 +328,13 @@ h3 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#sbProjectLink, #nwgProjectLink {
+#sbProjectLink, #nwgProjectLink, #gsProjectLink, #wfProjectLink {
     width: fit-content;
     margin: 2% auto;
     border: 2px solid rgba(255, 255, 255, 0);
 }
 
-#sbProjectLink:hover {
+#sbProjectLink:hover, #wfProjectLink:hover, #gsProjectLink:hover {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     cursor: pointer;
