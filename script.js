@@ -17,7 +17,10 @@ var projectsSwitch = document.getElementById("projectsSwitch");
 
 window.onload = () => {
     goToSection("about");
+    resize();
 };
+
+window.addEventListener("resize", resize);
 
 function goToSection(button) {
     unclickButtons();
@@ -156,3 +159,52 @@ function switchTo(section) {
         document.getElementById("projectsSection2").style.display = "flex";
     }
 }
+
+function resize() {
+    let height = window.innerHeight;
+    let width = window.innerWidth;
+    let result1;
+    if(height > width) {
+        result1 = height / width;
+        document.getElementById("meDetails").style.fontSize = 2 + 0.8 * result1 + "vw";
+        document.getElementById("leftMenu").style.width = 6 * result1 + "vw";
+        document.getElementById("leftMenu").style.fontSize = 3.5 + 1 * result1 + "vw";
+        document.getElementById("footerMenu").style.height = 5 + 3 * result1 + "vw";
+        document.getElementById("footerMenuList").style.paddingLeft = 6 * result1 + "vw";
+        document.getElementById("footerMenu").style.fontSize = 1.5 + 0.4 * result1 + "vw";
+        document.getElementById("studiesSection").style.fontSize = 1 + 0.4 * result1 + "vw";
+        if(result1 > 1.32) {
+            document.getElementById("topSubSection").style.flexDirection = "column";
+            document.getElementById("topSubSection").style.justifyContent = "space-around";
+            document.getElementById("bottomSubSection").style.flexDirection = "column";
+            document.getElementById("bottomSubSection").style.justifyContent = "space-around";
+            document.getElementById("projectsSection1").style.fontSize =  0.8 * result1 + "vw";
+        } else {
+            document.getElementById("topSubSection").style.flexDirection = "row";
+            document.getElementById("topSubSection").style.justifyContent = "center";
+            document.getElementById("bottomSubSection").style.flexDirection = "row";
+            document.getElementById("bottomSubSection").style.justifyContent = "center";
+        }
+    } else {
+        document.getElementById("meDetails").style.fontSize = "2vw";
+        document.getElementById("leftMenu").style.width = "5%";
+        document.getElementById("leftMenu").style.fontSize = "3.5vw";
+        document.getElementById("footerMenu").style.height = "5vw";
+        document.getElementById("footerMenuList").style.paddingLeft = "5vw";
+        document.getElementById("footerMenu").style.fontSize = "1.5vw";
+        document.getElementById("studiesSection").style.fontSize = "1vw";
+    }
+    let result = width / height;
+    if(result < 1.33) {
+        document.getElementById("meSection").style.flexDirection = "column-reverse";
+    } else {
+        document.getElementById("meSection").style.flexDirection = "row";
+    }
+    if(result > 1.1) {
+        document.getElementById("projectsSection1").style.flexDirection = "row";
+        document.getElementById("projectsSection2").style.flexDirection = "row";
+    } else {
+        document.getElementById("projectsSection1").style.flexDirection = "column";
+        document.getElementById("projectsSection2").style.flexDirection = "column";
+    }
+} 

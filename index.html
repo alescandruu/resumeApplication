@@ -10,14 +10,14 @@
 </head>
 </head>
 <body id="body">
-    <div class="leftMenu">
-        <ul class="leftMenuList">
+    <div class="leftMenu" id="leftMenu">
+        <ul class="leftMenuList" id="leftMenuList">
             <li onclick="goToLinkedin()" class="linkedinIcon"><i class="fa fa-linkedin-square" class="icons"></i></li>
             <li onclick="goToGithub()" class="githubIcon"><i class="fa fa-github" class="icons"></i></li>
         </ul>
     </div>
-    <div class="footerMenu">
-        <ul class="footerMenuList">
+    <div class="footerMenu" id="footerMenu">
+        <ul class="footerMenuList" id="footerMenuList">
             <li onclick="goToSection('about')" id="aboutButton">ABOUT</li>
             <li onclick="goToSection('studies')" id="studiesButton">EDUCATION</li>
             <li onclick="goToSection('projects')" id="projectsButton">PROJECTS</li>
@@ -28,42 +28,42 @@
             <p id="switchButton2" onclick="switchTo('second')">2</p>
         </div>
     </div>
-    <div class="meSection">
-        <div class="meDetails">
-            <h3>
+    <div class="meSection" id="meSection">
+        <div class="meDetails" id="meDetails">
+            <p>
                 <span class="span1">&lt</span>
                 Hello World! 
                 <span class="span1">/&gt</span>
-            </h3>
-            <h3>
+            </p>
+            <p>
                 <span class="span2">&lt</span>
-                I'm Alex - Junior Web Developer
+                I'm Alex - Web Developer
                 <span class="span2">/&gt</span>
-            </h3>
-            <h3 class="span3">
+            </p>
+            <p class="span3">
                 <span>&lt</span>
                 script
                 <span>&gt</span>
-            </h3>
-            <h3>
+            </p>
+            <p>
                 <pre><span class="span5">if </span><span class="span6">(</span> life === boring <span class="span6">)</span> <span class="span4">{</span>  
     add css :)
 <span class="span4">}</span>
                 </pre>
-            </h3>
-            <h3 class="span3">
+            </p>
+            <p class="span3">
                 <span>&lt/</span>
                 script
                 <span>&gt</span>
-            </h3>
+            </p>
         </div>
-        <img class="mePhoto" src="images/me1.png">
+        <img class="mePhoto" src="images/me1.png" id="mePhoto">
     </div>
-    <div class="studiesSection"> 
-        <div class="topSubSection">
+    <div class="studiesSection" id="studiesSection"> 
+        <div class="topSubSection" id="topSubSection">
             <div class="studiesElement">
                 <div class="studiesImage">
-                    <img src="images/atl-modified.png" onclick="switchSection('college')"> 
+                    <img src="images/atl-modified.png" onclick="switchSection('college')" onmouseover="this.src = 'images/detailss-modified.png'" onmouseout="this.src = 'images/atl-modified.png'"> 
                 </div>
                 <div class="studiesDetails">
                     <h2 id="collegeName" >"A.T. Laurian" National College</h2>
@@ -83,7 +83,7 @@
             </div>
             <div class="studiesElement">
                 <div class="studiesImage">
-                    <img src="images/siit-modified.png" onclick="switchSection('siit1')"> 
+                    <img src="images/siit-modified.png" onclick="switchSection('siit1')" onmouseover="this.src = 'images/detailss-modified.png'" onmouseout="this.src = 'images/siit-modified.png'"> 
                 </div>
                 <div class="studiesDetails">
                     <h2 id="siitName1">Informal School of IT</h2>
@@ -103,10 +103,10 @@
                 </div>
             </div>
         </div>
-        <div class="bottomSubSection">
+        <div class="bottomSubSection" id="bottomSubSection">
             <div class="studiesElement">
                 <div class="studiesImage">
-                    <img src="images/fsega-modified.png" onclick="switchSection('faculty')"> 
+                    <img src="images/fsega-modified.png" onclick="switchSection('faculty')" onmouseover="this.src = 'images/detailss-modified.png'" onmouseout="this.src = 'images/fsega-modified.png'"> 
                 </div>
                 <div class="studiesDetails">
                     <h2 id="facultyName">Faculty of Economics and Business Administration</h2>
@@ -125,7 +125,7 @@
             </div>
             <div class="studiesElement">
                 <div class="studiesImage">
-                    <img src="images/siit-modified.png" onclick="switchSection('siit2')"> 
+                    <img src="images/siit-modified.png" onclick="switchSection('siit2')" onmouseover="this.src = 'images/detailss-modified.png'" onmouseout="this.src = 'images/siit-modified.png'"> 
                 </div>
                 <div class="studiesDetails">
                     <h2 id="siitName2">Informal School of IT</h2>
