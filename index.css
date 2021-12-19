@@ -15,7 +15,7 @@ body {
     position: fixed;
     color: white;
     background-color: rgba(0, 0, 0, 0.336);
-    width: 5em;
+    width: 5%;
     margin: 0px;
     height: 100vh;
     display: flex;
@@ -23,6 +23,7 @@ body {
     align-items:flex-end;
     left: 0;
     bottom: 0;
+    font-size: 3.5vw;
 }
 
 ul {
@@ -37,7 +38,6 @@ ul {
 
 .leftMenuList li {
     margin-bottom: 80%;
-    font-size: 300%;
     padding: 0;
     border: 3px solid rgba(0, 0, 0, 0);
 }
@@ -57,18 +57,17 @@ ul {
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 3.3em;
+    height: 5vw;
     color: white;
     justify-content: space-between;
-    font-size: 140%;
+    font-size: 1.5vw;
     font-weight: bold;
 }
 
 .footerMenuList {
     display: flex;
     gap: 5%;
-    padding-left: 3.5em;
-    height: 100%;
+    padding-left: 5vw;
     align-items: center;
 }
 
@@ -123,12 +122,15 @@ ul {
     gap: 10%;
     font-family: 'Courier New', Courier, monospace;
     height: 100vh;
+    font-weight: bold;
+    /* background-color: blue; */
 }
 
 
 .meDetails {
-    font-size: 1.3em;
-    width: 38%;
+    font-size: 2vw;
+    width: 40vw;
+    /* background-color: blueviolet; */
 }
 .mePhoto {
     width: 31%;
@@ -180,8 +182,11 @@ h3 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    margin-top: -6%;
+    /* justify-content: center; */
+    /* margin-top: -5vw; */
+    font-size: 1vw;
+    gap: 1vw;
+    align-self: center;
 }
 
 .studiesSection h2, .studiesSection h4 {
@@ -228,7 +233,7 @@ h3 {
     padding-left: 10%;
     padding-right: 2%;
     /* text-align: center; */
-    gap: 10%;
+    gap: 6vw;
     /* background-color: blue; */
 }
 
@@ -258,9 +263,10 @@ h3 {
     height: 100vh;
     display: flex;
     color: white;
-    gap: 1%;
-    padding-left: 5%;
-    padding-top: 6%;
+    /* padding-left: 5%; */
+    font-size: 1.1vw;
+    background-color: brown;
+    /* justify-content: space-around; */
 }
 
 #projectsSection2 {
@@ -269,6 +275,7 @@ h3 {
 
 .noWheelGap, .sneakersBoutique {
     width: 50%;
+    margin: 0 auto;
 }
 
 .sbImages {
@@ -299,7 +306,6 @@ h3 {
     text-align: center;
     width: 95%;
     margin: 0 auto;
-    font-size: 115%;
 }
 
 .projectsSection2 {
@@ -348,7 +354,6 @@ h3 {
         justify-content: center;
     }
 }
-
 @media only screen and (max-width: 1120px) {
     .meSection {
         flex-direction: column;
@@ -357,7 +362,6 @@ h3 {
         justify-content: center;
     }
 }
-
 @media only screen and (max-width: 850px) {
     .studiesSection {
         display: flex;
