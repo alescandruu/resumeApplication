@@ -97,13 +97,16 @@ ul {
     display: none;
     width: 4%;
     justify-content: space-between;
-    margin-right: 25%;
+    margin-right: 3vw;
+    align-items: center;
 }
 
 .projectsSwitch p {
     padding:0 10%;
     border-radius: 50px;
     border: 2px solid white;
+    box-sizing:content-box;
+    text-align: center;
 }
 
 .projectsSwitch p:hover {
@@ -119,21 +122,22 @@ ul {
     margin-left: 3%;
     display: flex;
     align-items: center;
-    gap: 10%;
+    gap: 15vw;
     font-family: 'Courier New', Courier, monospace;
     height: 100vh;
     font-weight: bold;
+    /* justify-content: space-around; */
     /* background-color: blue; */
 }
 
 
 .meDetails {
-    font-size: 2vw;
+    font-size: 1.7vw;
     width: 40vw;
     /* background-color: blueviolet; */
 }
 .mePhoto {
-    width: 31%;
+    width: 26vw;
     border-radius: 50%;
     /* border: 10px solid white; */
 }
@@ -169,7 +173,7 @@ pre {
 pre {
     font-family:'Courier New', Courier, monospace;
     margin: 0;
-    margin-bottom: -3%;
+    /* margin-bottom: -3%; */
 }
 
 h3 {
@@ -263,11 +267,16 @@ h3 {
     height: 100vh;
     display: flex;
     color: white;
-    /* padding-left: 5%; */
+    padding-left: 4vw;
     font-size: 1.1vw;
-    background-color: brown;
-    /* justify-content: space-around; */
+    margin-top: -1vw;
+    /* background-color: brown; */
+    justify-content: space-around;
 }
+
+/* #projectsSection1, #projectsSection2 {
+    font-size: 9.1vw;
+} */
 
 #projectsSection2 {
     display: none;
@@ -324,14 +333,18 @@ h3 {
     display: flex;
     align-items: center;
     color: white;
-    /* justify-content: center; */
-    padding-top: 6%;
+    justify-content: center;
+    margin-top: -7%;
     flex-direction: column;
 }
 
-.contactSection h1 {
-    font-size: 5em;
+#contact1 {
+    font-size: 6vw;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#contact2 {
+    font-size: 1.5vw;
 }
 
 #sbProjectLink, #nwgProjectLink, #gsProjectLink, #wfProjectLink {
