@@ -105,44 +105,124 @@ var siit2 = 0;
 function switchSection (button) {
     if(button === "college") {
         if(college % 2 == 0) {
+            document.getElementById("atlImage").src = "images/details-modified1.png";
             collegeDetails.style.display = "block";
             collegeName.style.display = "none";
             college++;
+            if( facultyDetails.style.display === "block") {
+                document.getElementById("fsegaImage").src = "images/fsega-modified.png";
+                facultyDetails.style.display = "none";
+                facultyName.style.display = "block";
+                faculty++;
+            }
+            if(siitDetails1.style.display === "block") {
+                document.getElementById("siitImage1").src = "images/siit-modified.png";
+                siitDetails1.style.display = "none";
+                siitName1.style.display = "block";
+                siit1++;
+            }
+            if(siitDetails2.style.display === "block") {
+                document.getElementById("siitImage2").src = "images/siit-modified.png";
+                siitDetails2.style.display = "none";
+                siitName2.style.display = "block";
+                siit2++;
+            }
         }
         else {
+            document.getElementById("atlImage").src = "images/atl-modified.png";
             collegeDetails.style.display = "none";
             collegeName.style.display = "block";
             college++;
         }
     } else if (button === "faculty") {
         if(faculty % 2 == 0) {
+            if(collegeDetails.style.display === "block") {
+                document.getElementById("atlImage").src = "images/atl-modified.png";
+                collegeDetails.style.display = "none";
+                collegeName.style.display = "block";
+                college++; 
+            }
+            document.getElementById("fsegaImage").src = "images/details-modified1.png";
             facultyDetails.style.display = "block";
             facultyName.style.display = "none";
             faculty++;
+            if(siitDetails1.style.display === "block") {
+                document.getElementById("siitImage1").src = "images/siit-modified.png";
+                siitDetails1.style.display = "none";
+                siitName1.style.display = "block";
+                siit1++;
+            }
+            if(siitDetails2.style.display === "block") {
+                document.getElementById("siitImage2").src = "images/siit-modified.png";
+                siitDetails2.style.display = "none";
+                siitName2.style.display = "block";
+                siit2++;
+            }
         }
         else {
+            document.getElementById("fsegaImage").src = "images/fsega-modified.png";
             facultyDetails.style.display = "none";
             facultyName.style.display = "block";
             faculty++;
         }
     } else if(button === "siit1") {
         if(siit1 % 2 == 0) {
+            if(collegeDetails.style.display === "block") {
+                document.getElementById("atlImage").src = "images/atl-modified.png";
+                collegeDetails.style.display = "none";
+                collegeName.style.display = "block";
+                college++;
+            }
+            if(facultyDetails.style.display === "block") {
+                document.getElementById("fsegaImage").src = "images/fsega-modified.png";
+                facultyDetails.style.display = "none";
+                facultyName.style.display = "block";
+                faculty++;
+            }
+            document.getElementById("siitImage1").src = "images/details-modified1.png";
             siitDetails1.style.display = "block";
             siitName1.style.display = "none";
             siit1++;
+            if(siitDetails2.style.display === "block") {
+                document.getElementById("siitImage2").src = "images/siit-modified.png";
+                siitDetails2.style.display = "none";
+                siitName2.style.display = "block";
+                siit2++;
+            }
         }
         else {
+            document.getElementById("siitImage1").src = "images/siit-modified.png";
             siitDetails1.style.display = "none";
             siitName1.style.display = "block";
             siit1++;
         }
     } else if(button === "siit2") {
         if(siit2 % 2 == 0) {
+            if(collegeDetails.style.display === "block") {
+                document.getElementById("atlImage").src = "images/atl-modified.png";
+                collegeDetails.style.display = "none";
+                collegeName.style.display = "block";
+                college++;
+            }
+            if(facultyDetails.style.display === "block") {
+                document.getElementById("fsegaImage").src = "images/fsega-modified.png";
+                facultyDetails.style.display = "none";
+                facultyName.style.display = "block";
+                faculty++;
+            }
+            if(siitDetails1.style.display === "block") {
+                document.getElementById("siitImage1").src = "images/siit-modified.png";
+                siitDetails1.style.display = "none";
+                siitName1.style.display = "block";
+                siit1++;
+            }
+            document.getElementById("siitImage2").src = "images/details-modified1.png";
             siitDetails2.style.display = "block";
             siitName2.style.display = "none";
             siit2++;
         }
         else {
+            document.getElementById("siitImage2").src = "images/siit-modified.png";
             siitDetails2.style.display = "none";
             siitName2.style.display = "block";
             siit2++;
@@ -173,14 +253,14 @@ function resize() {
         document.getElementById("footerMenu").style.height = 5 + 3 * result1 + "vw";
         document.getElementById("footerMenuList").style.paddingLeft = 6 * result1 + "vw";
         document.getElementById("footerMenu").style.fontSize = 1.5 + 0.4 * result1 + "vw";
-        document.getElementById("studiesSection").style.fontSize = 1 + 0.4 * result1 + "vw";
+        document.getElementById("studiesSection").style.fontSize = 1 + 0.6 * result1 + "vw";
         document.getElementById("contact1").style.fontSize = 6 + 2 * result1 + "vw";
         document.getElementById("contact2").style.fontSize = 1.5 + 0.2 * result1 + "vw";
         document.getElementById("sbImage").style.width = 80 + 15 * result1 + "%";
         document.getElementById("nwgImage").style.width = 80 + 15 * result1 + "%";
         document.getElementById("wfProjectLink").style.width = 80 + 15 * result1 + "%";
         document.getElementById("gsProjectLink").style.width = 80 + 15 * result1 + "%";
-        document.getElementById("projectsSection1").style.fontSize = 1 + 0.4 * result1 + "vw";
+        document.getElementById("projectsSection1").style.fontSize = 1 + 0.6 * result1 + "vw";
         if(result1 > 1.32) {
             document.getElementById("topSubSection").style.flexDirection = "column";
             document.getElementById("topSubSection").style.justifyContent = "space-around";
@@ -194,7 +274,7 @@ function resize() {
             document.getElementById("bottomSubSection").style.justifyContent = "center";
         }
     } else {
-        document.getElementById("mePhoto").style.width = "24vw";
+        document.getElementById("mePhoto").style.width = "26vw";
         document.getElementById("meDetails").style.fontSize = "1.7vw";
         document.getElementById("leftMenu").style.width = "5%";
         document.getElementById("leftMenu").style.fontSize = "3.5vw";
@@ -216,7 +296,7 @@ function resize() {
     } else {
         document.getElementById("meSection").style.flexDirection = "row";
     }
-    if(result > 1.1) {
+    if(result > 0.5) {
         document.getElementById("projectsSection1").style.flexDirection = "row";
         document.getElementById("projectsSection2").style.flexDirection = "row";
         document.getElementById("projectsSection1").style.marginTop = "0vw";
@@ -225,7 +305,7 @@ function resize() {
     } else {
         document.getElementById("projectsSection1").style.flexDirection = "column";
         document.getElementById("projectsSection2").style.flexDirection = "column";
-        document.getElementById("projectsSection1").style.marginTop = -1 + -10 * result1 + "vw";
-        document.getElementById("projectsSection2").style.marginTop = -1 + -10 * result1 + "vw";
+        document.getElementById("projectsSection1").style.marginTop = -1 + -4 * result1 + "vw";
+        document.getElementById("projectsSection2").style.marginTop = -1 + -4 * result1 + "vw";
     }
 } 
