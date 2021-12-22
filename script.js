@@ -296,7 +296,7 @@ function resize() {
     } else {
         document.getElementById("meSection").style.flexDirection = "row";
     }
-    if(result > 0.5) {
+    if(result > 0.7) {
         document.getElementById("projectsSection1").style.flexDirection = "row";
         document.getElementById("projectsSection2").style.flexDirection = "row";
         document.getElementById("projectsSection1").style.marginTop = "0vw";
