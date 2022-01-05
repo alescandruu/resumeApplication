@@ -243,69 +243,94 @@ function switchTo(section) {
 function resize() {
     let height = window.innerHeight;
     let width = window.innerWidth;
-    let result1;
-    if(height > width) {
-        result1 = height / width;
-        document.getElementById("mePhoto").style.width = 24 + 8 * result1 + "vw"; 
-        document.getElementById("meDetails").style.fontSize = 2 + 0.8 * result1 + "vw";
-        document.getElementById("leftMenu").style.width = 6 * result1 + "vw";
-        document.getElementById("leftMenu").style.fontSize = 3.5 + 1 * result1 + "vw";
-        document.getElementById("footerMenu").style.height = 5 + 3 * result1 + "vw";
-        document.getElementById("footerMenuList").style.paddingLeft = 6 * result1 + "vw";
-        document.getElementById("footerMenu").style.fontSize = 1.5 + 0.4 * result1 + "vw";
-        document.getElementById("studiesSection").style.fontSize = 1 + 0.6 * result1 + "vw";
-        document.getElementById("contact1").style.fontSize = 6 + 2 * result1 + "vw";
-        document.getElementById("contact2").style.fontSize = 1.5 + 0.2 * result1 + "vw";
-        document.getElementById("sbImage").style.width = 80 + 15 * result1 + "%";
-        document.getElementById("nwgImage").style.width = 80 + 15 * result1 + "%";
-        document.getElementById("wfProjectLink").style.width = 80 + 15 * result1 + "%";
-        document.getElementById("gsProjectLink").style.width = 80 + 15 * result1 + "%";
-        document.getElementById("projectsSection1").style.fontSize = 1 + 0.6 * result1 + "vw";
-        if(result1 > 1.32) {
-            document.getElementById("topSubSection").style.flexDirection = "column";
-            document.getElementById("topSubSection").style.justifyContent = "space-around";
-            document.getElementById("bottomSubSection").style.flexDirection = "column";
-            document.getElementById("bottomSubSection").style.justifyContent = "space-around";
-            // document.getElementById("projectsSection1").style.fontSize =  0.8 * result1 + "vw";
-        } else {
-            document.getElementById("topSubSection").style.flexDirection = "row";
-            document.getElementById("topSubSection").style.justifyContent = "center";
-            document.getElementById("bottomSubSection").style.flexDirection = "row";
-            document.getElementById("bottomSubSection").style.justifyContent = "center";
-        }
-    } else {
-        document.getElementById("mePhoto").style.width = "26vw";
-        document.getElementById("meDetails").style.fontSize = "1.7vw";
-        document.getElementById("leftMenu").style.width = "5%";
-        document.getElementById("leftMenu").style.fontSize = "3.5vw";
-        document.getElementById("footerMenu").style.height = "5vw";
-        document.getElementById("footerMenuList").style.paddingLeft = "5vw";
-        document.getElementById("footerMenu").style.fontSize = "1.5vw";
-        document.getElementById("studiesSection").style.fontSize = "1vw";
-        document.getElementById("contact1").style.fontSize = "6vw";
-        document.getElementById("contact2").style.fontSize = "1.5vw";
-        document.getElementById("sbImage").style.width = "80%";
-        document.getElementById("nwgImage").style.width = "80%";
-        document.getElementById("wfProjectLink").style.width = 80 + 15 * result1 + "%";
-        document.getElementById("gsProjectLink").style.width = 80 + 15 * result1 + "%";
-        document.getElementById("projectsSection1").style.fontSize = "1.1vw";
-    }
-    let result = width / height;
-    if(result < 1.33) {
+    let result = height/width;
+    if(result > 1.15) {
         document.getElementById("meSection").style.flexDirection = "column-reverse";
-    } else {
+        document.getElementById("mePhoto").style.width = 23 + result * 5 + "vw";
+        document.getElementById("meDetails").style.fontSize = 2 + 0.6 * result + "vw";
+        document.getElementById("meSection").style.gap = result * 6 + "vh";
+    }
+    else {
         document.getElementById("meSection").style.flexDirection = "row";
+        document.getElementById("mePhoto").style.width = "23vw";
+        document.getElementById("meDetails").style.fontSize = "2vw";
+        document.getElementById("meSection").style.gap = "5vw";
     }
-    if(result > 0.7) {
-        document.getElementById("projectsSection1").style.flexDirection = "row";
-        document.getElementById("projectsSection2").style.flexDirection = "row";
-        document.getElementById("projectsSection1").style.marginTop = "0vw";
-        document.getElementById("projectsSection2").style.marginTop = "0vw";
-        // document.getElementById("switchButton1").style.padding = "0%";
+    if(result > 1.63) {
+        document.getElementById("topSubSection").style.flexDirection = "column";
+        document.getElementById("topSubSection").style.justifyContent = "space-around";
+        document.getElementById("bottomSubSection").style.flexDirection = "column";
+        document.getElementById("bottomSubSection").style.justifyContent = "space-around";
+        document.getElementById("studiesSection").style.fontSize = 1 + 0.6 *  result + "vw";
     } else {
-        document.getElementById("projectsSection1").style.flexDirection = "column";
-        document.getElementById("projectsSection2").style.flexDirection = "column";
-        document.getElementById("projectsSection1").style.marginTop = -1 + -4 * result1 + "vw";
-        document.getElementById("projectsSection2").style.marginTop = -1 + -4 * result1 + "vw";
+        document.getElementById("topSubSection").style.flexDirection = "row";
+        document.getElementById("topSubSection").style.justifyContent = "center";
+        document.getElementById("bottomSubSection").style.flexDirection = "row";
+        document.getElementById("bottomSubSection").style.justifyContent = "center";
     }
+    // let result1;
+    // if(height > width) {
+    //     result1 = height / width;
+    //     document.getElementById("mePhoto").style.width = 24 + 8 * result1 + "vw"; 
+    //     document.getElementById("meDetails").style.fontSize = 2 + 0.8 * result1 + "vw";
+    //     document.getElementById("leftMenu").style.width = 6 * result1 + "vw";
+    //     document.getElementById("leftMenu").style.fontSize = 3.5 + 1 * result1 + "vw";
+    //     document.getElementById("footerMenu").style.height = 5 + 3 * result1 + "vw";
+    //     document.getElementById("footerMenuList").style.paddingLeft = 6 * result1 + "vw";
+    //     document.getElementById("footerMenu").style.fontSize = 1.5 + 0.4 * result1 + "vw";
+    //     document.getElementById("studiesSection").style.fontSize = 1 + 0.6 * result1 + "vw";
+    //     document.getElementById("contact1").style.fontSize = 6 + 2 * result1 + "vw";
+    //     document.getElementById("contact2").style.fontSize = 1.5 + 0.2 * result1 + "vw";
+    //     document.getElementById("sbImage").style.width = 80 + 15 * result1 + "%";
+    //     document.getElementById("nwgImage").style.width = 80 + 15 * result1 + "%";
+    //     document.getElementById("wfProjectLink").style.width = 80 + 15 * result1 + "%";
+    //     document.getElementById("gsProjectLink").style.width = 80 + 15 * result1 + "%";
+    //     document.getElementById("projectsSection1").style.fontSize = 1 + 0.6 * result1 + "vw";
+    //     if(result1 > 1.32) {
+    //         document.getElementById("topSubSection").style.flexDirection = "column";
+    //         document.getElementById("topSubSection").style.justifyContent = "space-around";
+    //         document.getElementById("bottomSubSection").style.flexDirection = "column";
+    //         document.getElementById("bottomSubSection").style.justifyContent = "space-around";
+    //         // document.getElementById("projectsSection1").style.fontSize =  0.8 * result1 + "vw";
+    //     } else {
+    //         document.getElementById("topSubSection").style.flexDirection = "row";
+    //         document.getElementById("topSubSection").style.justifyContent = "center";
+    //         document.getElementById("bottomSubSection").style.flexDirection = "row";
+    //         document.getElementById("bottomSubSection").style.justifyContent = "center";
+    //     }
+    // } else {
+    //     document.getElementById("mePhoto").style.width = "26vw";
+    //     document.getElementById("meDetails").style.fontSize = "1.7vw";
+    //     document.getElementById("leftMenu").style.width = "5%";
+    //     document.getElementById("leftMenu").style.fontSize = "3.5vw";
+    //     document.getElementById("footerMenu").style.height = "5vw";
+    //     document.getElementById("footerMenuList").style.paddingLeft = "5vw";
+    //     document.getElementById("footerMenu").style.fontSize = "1.5vw";
+    //     document.getElementById("studiesSection").style.fontSize = "1vw";
+    //     document.getElementById("contact1").style.fontSize = "6vw";
+    //     document.getElementById("contact2").style.fontSize = "1.5vw";
+    //     document.getElementById("sbImage").style.width = "80%";
+    //     document.getElementById("nwgImage").style.width = "80%";
+    //     document.getElementById("wfProjectLink").style.width = 80 + 15 * result1 + "%";
+    //     document.getElementById("gsProjectLink").style.width = 80 + 15 * result1 + "%";
+    //     document.getElementById("projectsSection1").style.fontSize = "1.1vw";
+    // }
+    // let result = width / height;
+    // if(result < 1.33) {
+    //     document.getElementById("meSection").style.flexDirection = "column-reverse";
+    // } else {
+    //     document.getElementById("meSection").style.flexDirection = "row";
+    // }
+    // if(result > 0.7) {
+    //     document.getElementById("projectsSection1").style.flexDirection = "row";
+    //     document.getElementById("projectsSection2").style.flexDirection = "row";
+    //     document.getElementById("projectsSection1").style.marginTop = "0vw";
+    //     document.getElementById("projectsSection2").style.marginTop = "0vw";
+    //     // document.getElementById("switchButton1").style.padding = "0%";
+    // } else {
+    //     document.getElementById("projectsSection1").style.flexDirection = "column";
+    //     document.getElementById("projectsSection2").style.flexDirection = "column";
+    //     document.getElementById("projectsSection1").style.marginTop = -1 + -4 * result1 + "vw";
+    //     document.getElementById("projectsSection2").style.marginTop = -1 + -4 * result1 + "vw";
+    // }
 } 

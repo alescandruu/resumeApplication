@@ -15,7 +15,7 @@ body {
     position: fixed;
     color: white;
     background-color: rgba(0, 0, 0, 0.336);
-    width: 5%;
+    width: 4%;
     margin: 0px;
     height: 100vh;
     display: flex;
@@ -23,7 +23,7 @@ body {
     align-items:flex-end;
     left: 0;
     bottom: 0;
-    font-size: 3.5vw;
+    font-size: 2.4vw;
 }
 
 ul {
@@ -57,10 +57,10 @@ ul {
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 5vw;
+    height: 4vw;
     color: white;
     justify-content: space-between;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     font-weight: bold;
     overflow: auto;
 }
@@ -68,7 +68,7 @@ ul {
 .footerMenuList {
     display: flex;
     gap: 5%;
-    padding-left: 5vw;
+    padding-left: 4vw;
     align-items: center;
 }
 
@@ -96,9 +96,9 @@ ul {
 
 .projectsSwitch {
     display: none;
-    width: 4%;
+    width: 3.2vw;
     justify-content: space-between;
-    margin-right: 3vw;
+    margin-right: 4vw;
     align-items: center;
 }
 
@@ -123,7 +123,7 @@ ul {
     margin-left: 3%;
     display: flex;
     align-items: center;
-    gap: 15vw;
+    gap: 5vw;
     font-family: 'Courier New', Courier, monospace;
     height: 100vh;
     font-weight: bold;
@@ -138,7 +138,7 @@ ul {
     /* background-color: blueviolet; */
 }
 .mePhoto {
-    width: 26vw;
+    width: 23vw;
     border-radius: 50%;
     /* border: 10px solid white; */
 }
@@ -336,19 +336,18 @@ h3 {
     align-items: center;
     color: white;
     justify-content: center;
-    margin-top: -7%;
-    padding-left: 6%;
+    margin-top: -10%;
     flex-direction: column;
     text-align: center;
 }
 
 #contact1 {
-    font-size: 6vw;
+    font-size: 5vw;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #contact2 {
-    font-size: 1.5vw;
+    font-size: 0.8vw;
 }
 
 #sbProjectLink, #nwgProjectLink, #gsProjectLink, #wfProjectLink {
@@ -363,34 +362,36 @@ h3 {
     cursor: pointer;
 }
 
-/* @media only screen and (max-width: 1120px) {
-    .meSection {
-        flex-direction: column;
-        font-size: 1em;
-        gap: 1%;
-        justify-content: center;
+@media (max-width: 800px) {
+    .leftMenu {
+        /* color: red; */
+        width: 5.5%;
+        font-size: 4vw;
+    }
+    .footerMenu {
+        /* color: red; */
+        height: 5vw;
+        font-size: 1.9vw;
+    }
+    .footerMenuList {
+        padding-left: 5vw;
     }
 }
-@media only screen and (max-width: 1120px) {
-    .meSection {
-        flex-direction: column;
-        font-size: 1em;
-        gap: 1%;
-        justify-content: center;
+
+@media (max-width: 500px) {
+    .leftMenu {
+        /* color: red; */
+        width: 7%;
+        font-size: 5.5vw;
+    }
+    .footerMenu {
+        /* color: red; */
+        height: 6.5vw;
+        font-size: 2.6vw;
+    }
+    .footerMenuList {
+        padding-left: 6.5vw;
+        /* -webkit-transform: rotate(-90deg); */
     }
 }
-@media only screen and (max-width: 850px) {
-    .studiesSection {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 5%;
-        text-align: start;
-    }
-    .topSubSection {
-        flex-direction: column;
-    }
-    .bottomSubSection {
-        flex-direction: column;
-    }
-} */
+
