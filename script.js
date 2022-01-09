@@ -335,8 +335,8 @@ function resize() {
     if(result > 0.83) {
         document.getElementById("projectsSection1").style.flexDirection = "column";
         document.getElementById("projectsSection2").style.flexDirection = "column";
-        document.getElementById("projectsSection1").style.fontSize = 1 + (result - 0.73) + "vw";
-        document.getElementById("projectsSection2").style.fontSize = 1 + (result - 0.73) + "vw";
+        document.getElementById("projectsSection1").style.fontSize = 1 + 1.2 *(result - 0.73) + "vw";
+        document.getElementById("projectsSection2").style.fontSize = 1 + 1.2 * (result - 0.73) + "vw";
         document.getElementById("noWheelGap").style.width = "90%";
         document.getElementById("sneakersBoutique").style.width = "90%";
         document.getElementById("gamesStore").style.width = "90%";
