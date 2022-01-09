@@ -316,7 +316,7 @@ function resize() {
     else {
         document.getElementById("meSection").style.flexDirection = "row";
         document.getElementById("mePhoto").style.width = "23vw";
-        document.getElementById("meDetails").style.fontSize = "2vw";
+        document.getElementById("meDetails").style.fontSize = "1.7vw";
         document.getElementById("meSection").style.gap = "5vw";
     }
     if(result > 1.63) {
@@ -368,3 +368,5 @@ function resize() {
     document.getElementById("contact2").style.fontSize = 0.5 + 0.8 * result + "vw";
     markSection();
 }
+
+// document.getElementById("meSection").style.gap = "5vw";

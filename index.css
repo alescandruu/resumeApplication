@@ -68,7 +68,7 @@ ul {
 
 .footerMenuList {
     display: flex;
-    gap: 2%;
+    gap: 3vw;
     padding-left: 4vw;
     align-items: center;
 }
@@ -134,7 +134,7 @@ ul {
 }
 
 
-.meDetails {
+#meDetails {
     font-size: 1.7vw;
     width: 40vw;
     /* background-color: blueviolet; */
