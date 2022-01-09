@@ -17,36 +17,87 @@ var projectsSwitch = document.getElementById("projectsSwitch");
 
 window.onload = () => {
     goToSection("about");
+    markSection();
     resize();
 };
 
 window.addEventListener("resize", resize);
+
+window.addEventListener("scroll", markSection);
 
 function goToSection(button) {
     unclickButtons();
     if(button === "about") {
         about.style.borderLeft = "3px solid white";
         about.style.borderRight = "3px solid white";
-        projectsSwitch.style.display = "none";
+        // projectsSwitch.style.display = "none";
         window.scrollTo(0,0);
     } else if(button === "studies") {
+        // projectsSwitch.style.display = "none";
         studies.style.borderLeft = "3px solid white";
         studies.style.borderRight = "3px solid white";
         var height = window.innerHeight;
-        projectsSwitch.style.display = "none";
         window.scrollTo(0,0.923 * height);
     } else if(button === "projects") {
         projects.style.borderLeft = "3px solid white";
         projects.style.borderRight = "3px solid white";
         var height = window.innerHeight;
         window.scrollTo(0,1.923 * height);
-        setTimeout(() => {projectsSwitch.style.display = "flex";}, 600);
+        // setTimeout(() => {projectsSwitch.style.display = "flex";}, 600);
     } else if(button === "contact") {
         contact.style.borderLeft = "3px solid white";
         contact.style.borderRight = "3px solid white";
         var height = window.innerHeight;
-        projectsSwitch.style.display = "none";
+        // projectsSwitch.style.display = "none";
         window.scrollTo(0,2.923 * height);
+    }
+}
+
+function markSection() {
+    var height = window.innerHeight;
+    var width = window.innerWidth;
+    if(width <= 1000) {
+        if(window.scrollY >= 0 && window.scrollY <= 0.25 * height) {
+            about.style.borderLeft = "3px solid white";
+            about.style.borderRight = "3px solid white";
+            studies.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            studies.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            projects.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            projects.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            contact.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            contact.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+        }  
+        if ( window.scrollY >= 0.9 * height && window.scrollY <= 1.1 * height) {
+            studies.style.borderLeft = "3px solid white";
+            studies.style.borderRight = "3px solid white";
+            about.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            about.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            projects.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            projects.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            contact.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            contact.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+        } 
+        if (window.scrollY >= 1.9 * height && window.scrollY <= 2.1 * height) {
+            studies.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            studies.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            about.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            about.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            projects.style.borderLeft = "3px solid white";
+            projects.style.borderRight = "3px solid white";
+            contact.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            contact.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            // projectsSwitch.style.display = "flex";
+        }
+        if (window.scrollY >= 2.7 * height) {
+            studies.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            studies.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            about.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            about.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            projects.style.borderLeft = "3px solid rgba(0, 0, 0, 0)";
+            projects.style.borderRight = "3px solid rgba(0, 0, 0, 0)";
+            contact.style.borderLeft = "3px solid white";
+            contact.style.borderRight = "3px solid white";
+        }
     }
 }
 
@@ -243,6 +294,18 @@ function switchTo(section) {
 function resize() {
     let height = window.innerHeight;
     let width = window.innerWidth;
+    if(width <= 1000) {
+        document.getElementById("aboutButton").setAttribute("onclick", "");
+        document.getElementById("studiesButton").setAttribute("onclick", "");
+        document.getElementById("projectsButton").setAttribute("onclick", "");
+        document.getElementById("contactButton").setAttribute("onclick", "");
+    }
+    else {
+        document.getElementById("aboutButton").setAttribute("onclick", "goToSection('about')");
+        document.getElementById("studiesButton").setAttribute("onclick", "goToSection('studies')");
+        document.getElementById("projectsButton").setAttribute("onclick", "goToSection('projects')");
+        document.getElementById("contactButton").setAttribute("onclick", "goToSection('contact')");
+    }
     let result = height/width;
     if(result > 1.15) {
         document.getElementById("meSection").style.flexDirection = "column-reverse";
@@ -267,6 +330,41 @@ function resize() {
         document.getElementById("topSubSection").style.justifyContent = "center";
         document.getElementById("bottomSubSection").style.flexDirection = "row";
         document.getElementById("bottomSubSection").style.justifyContent = "center";
+        document.getElementById("studiesSection").style.fontSize = "1vw";
     }
-    
-} 
+    if(result > 0.83) {
+        document.getElementById("projectsSection1").style.flexDirection = "column";
+        document.getElementById("projectsSection2").style.flexDirection = "column";
+        document.getElementById("projectsSection1").style.fontSize = 1 + (result - 0.73) + "vw";
+        document.getElementById("projectsSection2").style.fontSize = 1 + (result - 0.73) + "vw";
+        document.getElementById("noWheelGap").style.width = "90%";
+        document.getElementById("sneakersBoutique").style.width = "90%";
+        document.getElementById("gamesStore").style.width = "90%";
+        document.getElementById("weatherForecast").style.width = "90%";
+        document.getElementById("sbImage").style.width = 50 + 5 * result + "%";
+        document.getElementById("nwgImage").style.width = 50 + 5 * result + "%";
+        document.getElementById("wfImage").style.width = 50 + 5 * result + "%";
+        document.getElementById("gsImage").style.width = 50 + 5 * result + "%";
+    }
+    else {
+        if(result > 0.4) {
+            document.getElementById("projectsSection1").style.marginTop = 4 * result + "vw";
+            document.getElementById("projectsSection2").style.marginTop = 4 * result + "vw";
+        }
+        document.getElementById("projectsSection1").style.flexDirection = "row";
+        document.getElementById("projectsSection2").style.flexDirection = "row";
+        document.getElementById("projectsSection1").style.fontSize = "1.1vw";
+        document.getElementById("projectsSection2").style.fontSize = "1.1vw";
+        document.getElementById("noWheelGap").style.width = "75%";
+        document.getElementById("sneakersBoutique").style.width = "75%";
+        document.getElementById("gamesStore").style.width = "75%";
+        document.getElementById("weatherForecast").style.width = "75%";
+        document.getElementById("sbImage").style.width = "75%";
+        document.getElementById("nwgImage").style.width = "75%";
+        document.getElementById("wfImage").style.width = "80%";
+        document.getElementById("gsImage").style.width = "80%";
+    }
+    document.getElementById("contact1").style.fontSize = 3 + 3 * result + "vw";
+    document.getElementById("contact2").style.fontSize = 0.5 + 0.8 * result + "vw";
+    markSection();
+}

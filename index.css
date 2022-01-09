@@ -10,6 +10,7 @@ body {
     overflow: hidden;
 }
 
+
 .leftMenu {
     position: absolute;
     position: fixed;
@@ -118,6 +119,7 @@ ul {
 }
 
 .meSection {
+    scroll-snap-align: start;
     color: white;
     justify-content: center;
     margin-left: 3%;
@@ -182,6 +184,7 @@ h3 {
 }
 
 .studiesSection {
+    scroll-snap-align: start;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -265,12 +268,14 @@ h3 {
 }
 
 .projectsSection {
+    /* background-color: rgb(165, 91, 0); */
+    scroll-snap-align: start;
     height: 100vh;
     display: flex;
     color: white;
     padding-left: 4vw;
     font-size: 1.1vw;
-    margin-top: -1vw;
+    margin-top: 1vh;
     padding-bottom: 100px;
     /* background-color: brown; */
     justify-content: space-around;
@@ -287,15 +292,16 @@ h3 {
 .noWheelGap, .sneakersBoutique {
     width: 50%;
     margin: 0 auto;
+    /* background-color: bisque; */
 }
 
 .sbImages {
-    width: 80%;
+    width: 75%;
     border-radius: 25px;
 }
 
 .nwgImages {
-    width: 80%;
+    width: 75%;
     border-radius: 25px;
 }
 
@@ -320,10 +326,17 @@ h3 {
 }
 
 .projectsSection2 {
+    /* background-color: bisque; */
+    
+    /* width: 85%; */
+    
+}
+
+#wfImage, #gsImage {
     cursor: pointer;
     border: 3px solid rgba(255, 255, 255, 0);
-    width: 90%;
     border-radius: 25px;
+    width: 80%;
 }
 
 .projectsSection2:hover {
@@ -331,23 +344,42 @@ h3 {
 }
 
 .contactSection {
+    scroll-snap-align: start;
     height: 100vh;
     display: flex;
     align-items: center;
     color: white;
     justify-content: center;
-    margin-top: -10%;
+    margin-top: -15%;
     flex-direction: column;
     text-align: center;
 }
 
+#switch1, #switch2, #switch3 {
+    color: white;
+    font-size: 200%;
+    border-radius: 25px;
+    border: 0px solid rgba(255, 255, 255, 0);
+    background-color: rgba(255, 140, 0, 0);
+}
+
+#switch1 :hover, #switch2 :hover, #switch3 :hover {
+    cursor: pointer;
+    color: black;
+}
+
+#switch3 {
+    display: none;
+    margin: 0 auto;
+}
+
 #contact1 {
-    font-size: 5vw;
+    /* font-size: 5vw; */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #contact2 {
-    font-size: 0.8vw;
+    /* font-size: 0.8vw; */
 }
 
 #sbProjectLink, #nwgProjectLink, #gsProjectLink, #wfProjectLink {
@@ -360,6 +392,12 @@ h3 {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    body {
+        overflow-y: scroll;
+    }
 }
 
 @media (max-width: 800px) {
@@ -375,6 +413,12 @@ h3 {
     }
     .footerMenuList {
         padding-left: 5vw;
+    }
+    #switch2 {
+        display: none;
+    }
+    #switch3 {
+        display: block;
     }
 }
 
