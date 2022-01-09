@@ -292,8 +292,8 @@ function switchTo(section) {
 }
 
 function resize() {
-    let height = window.innerHeight;
-    let width = window.innerWidth;
+    let height = window.outerHeight;
+    let width = window.outerWidth;
     if(width <= 1000) {
         document.getElementById("aboutButton").setAttribute("onclick", "");
         document.getElementById("studiesButton").setAttribute("onclick", "");
