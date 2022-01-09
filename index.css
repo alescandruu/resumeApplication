@@ -60,7 +60,7 @@ ul {
     flex-direction: row;
     height: 4vw;
     color: white;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     font-size: 1.1vw;
     font-weight: bold;
     overflow: auto;
@@ -68,7 +68,7 @@ ul {
 
 .footerMenuList {
     display: flex;
-    gap: 5%;
+    gap: 2%;
     padding-left: 4vw;
     align-items: center;
 }
