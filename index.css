@@ -68,7 +68,7 @@ ul {
 
 .footerMenuList {
     display: flex;
-    gap: 3vw;
+    gap: 1vw;
     padding-left: 4vw;
     align-items: center;
 }
