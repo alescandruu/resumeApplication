@@ -369,4 +369,9 @@ function resize() {
     markSection();
 }
 
+function showContact() {
+    document.getElementById("contactButton1").style.display = "none";
+    document.getElementById("contact2").style.display = "block";
+}
+
 // document.getElementById("meSection").style.gap = "5vw";

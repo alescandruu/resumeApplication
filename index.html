@@ -153,10 +153,10 @@
                 <img class="sbImages" src="images/sb5.png"> -->
             </div>
             <div class="sbDetails">
-                <h2 id="sbProjectLink" onclick="goToSb()">Sneakers Boutique</h2>
+                <h2 id="sbProjectLink">Sneakers Boutique <button onclick="goToSb()" class="seeLive">LIVE</button></h2>
                 <p>Sneakers Boutique is a footwear shop wich includes the main functionalities of an online store application. The products are presented to the user by the home page, from wich he can see the details(price, description, materials) of the article that he is excited about. Of course, he can also introduce it in his cart and modify its amount afterwards. In addition to this, the admin page is the place where the footwear articles are added, modified or removed from the stocks.
                 </p>
-                <p>This project was realised with Vanilla JavaScript and is connected to a Firebase database. It was used to store the products information wich was fetched from the frontend application by AJAX and APIs. I also uitilized Bootstrap and Media Queries to make the app responsive.</p>
+                <p>This project was realised with Vanilla JavaScript and is connected to a Firebase database. It was used to store the products information wich was fetched from the frontend application by AJAX and APIs.</p>
             </div>
         </div>
         <div class="noWheelGap" id="noWheelGap">
@@ -166,7 +166,7 @@
                 <img class="nwgImages" src="images/nwg1.png"> -->
             </div>
             <div class="nwgDetails">
-                <h2 id="nwgProjectLink" >No-Wheel-Gap</h2>
+                <h2 id="nwgProjectLink">No-Wheel-Gap <button class="seeLive">LIVE</button></h2>
                 <p>No-Wheel-Gap is an automotive social network and the project that I am currently working on. It is a ReactJS application wich is going to include users, posts, likes, comments and so on. I will come back with updates soon.</p>
                 <p>The network application uses a MongoDB database wich stores users, posts, passwords, emails and so on. The components are linked by React Router and the state is managed through React Redux.</p>
                 <button id="switch1" onclick="switchTo('second')"><i class="fa fa-arrow-circle-right"></i></button>
@@ -183,7 +183,7 @@
                 <img class="sbImages" src="images/sb5.png"> -->
             </div>
             <div class="sbDetails">
-                <h2 id="wfProjectLink" onclick="goToWf()">Weather Forecast</h2>
+                <h2 id="wfProjectLink">Weather Forecast <button onclick="goToWf()"class="seeLive">LIVE</button></h2>
                 <p>The Weather Forecast App is one of the first projects that I worked on. It indicates the current weather conditions and reveals the forecast for the next six days. The user can look for the location that he is curious about or he can let the app to find out his position.</p>
                 <button id="switch2" onclick="switchTo('first')"><i class="fa fa-arrow-circle-left"></i></button>
             </div>
@@ -195,7 +195,7 @@
                 <img class="nwgImages" src="images/nwg1.png"> -->
             </div>
             <div class="nwgDetails">
-                <h2 id="gsProjectLink" onclick="goToGs()">Game Store</h2>
+                <h2 id="gsProjectLink">Game Store <button onclick="goToGs()" class="seeLive">LIVE</button></h2>
                 <p>The Game Store App was realized as a workshop in order to practice working with APIs and HTTP Request methods. The Home page displays all the games and the Details page shows their specifications, wich can be modified. It is also possible to add new games.</p>
                 <button id="switch3" onclick="switchTo('first')"><i class="fa fa-arrow-circle-left"></i></button>
             </div>
@@ -203,9 +203,11 @@
     </div>
     <div class="contactSection" id>
         <h1 id="contact1">Thank you :)</h1>
+        <button id="contactButton1" onclick="showContact()">Contact</button>
         <div id="contact2">
             <h2><i class="fa fa-phone"></i> 0725410990</h2>
             <h2><i class="fa fa-envelope"></i> alex.daniliuc14@yahoo.com</h2>
+            <a id="dCv" href="images/CV.pdf" download="">Download CV</a>
         </div>
     </div>
 

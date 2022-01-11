@@ -343,6 +343,21 @@ h3 {
     border: 3px solid white;
 }
 
+.seeLive {
+    padding-bottom: 1%;
+    font-size: 35%;
+    color: white;
+    background-color: red;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-weight:900;
+}
+
+.seeLive:hover {
+    cursor: pointer;
+    color: black;
+}
+
 .contactSection {
     scroll-snap-align: start;
     height: 100vh;
@@ -357,7 +372,7 @@ h3 {
 
 #switch1, #switch2, #switch3 {
     color: white;
-    font-size: 200%;
+    font-size: 150%;
     border-radius: 25px;
     border: 0px solid rgba(255, 255, 255, 0);
     background-color: rgba(255, 140, 0, 0);
@@ -380,6 +395,28 @@ h3 {
 
 #contact2 {
     /* font-size: 0.8vw; */
+    display: none;
+}
+
+#dCv {
+    text-decoration: none;
+    padding: 0 2%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#contactButton1, #dCv {
+    color: black;
+    font-size: 1.1vw;
+    border: 2px solid ;
+    border-radius: 25px;
+    font-weight:700;
+    background-color: rgb(255, 255, 255);
+}
+
+#contactButton1:hover, #dCv:hover {
+    cursor: pointer;
+    background-color: rgb(134, 134, 134);
+    /* color: white; */
 }
 
 #sbProjectLink, #nwgProjectLink, #gsProjectLink, #wfProjectLink {
@@ -388,11 +425,11 @@ h3 {
     border: 2px solid rgba(255, 255, 255, 0);
 }
 
-#sbProjectLink:hover, #wfProjectLink:hover, #gsProjectLink:hover {
+/* #sbProjectLink:hover, #wfProjectLink:hover, #gsProjectLink:hover {
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     cursor: pointer;
-}
+} */
 
 @media (max-width: 1000px) {
     body {
@@ -437,6 +474,9 @@ h3 {
     .footerMenuList {
         padding-left: 6.5vw;
         /* -webkit-transform: rotate(-90deg); */
+    }
+    #contactButton1, #dCv {
+        font-size: 2.5vw;
     }
 }
 
