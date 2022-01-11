@@ -137,15 +137,15 @@ function goToGithub() {
 }
 
 function goToSb() {
-    window.open("https://alescandruu.github.io/webwork/index.html");
+    window.open("https://github.com/alescandruu/webwork");
 }
 
 function goToWf() {
-    window.open("https://alescandruu.github.io/weatherForecast/");
+    window.open("https://github.com/alescandruu/weatherForecast");
 }
 
 function goToGs() {
-    window.open("https://alescandruu.github.io/gamesStore/");
+    window.open("https://github.com/alescandruu/gamesStore");
 }
 
 var college = 0;
